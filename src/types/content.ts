@@ -39,6 +39,7 @@ export type ProjectItem = {
     href: string;
     disabled?: boolean;
   }[];
+  note?: string;
 };
 
 export type SkillCategory = {

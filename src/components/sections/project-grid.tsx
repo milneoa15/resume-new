@@ -96,6 +96,11 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                   })}
                 </div>
               ) : null}
+              {project.note ? (
+                <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
+                  {project.note}
+                </p>
+              ) : null}
             </Card>
           </motion.div>
         ))}
