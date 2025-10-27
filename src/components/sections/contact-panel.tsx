@@ -22,16 +22,17 @@ const iconMap = {
 } as const;
 
 export function ContactPanel() {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [feedback, setFeedback] = useState<{ type: "idle" | "success" | "error"; message?: string }>({ type: "idle" });
   const {
     register,
     handleSubmit,
     reset,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
   const onSubmit = async (values: FormValues) => {
-    setStatus("idle");
+    setFeedback({ type: "idle" });
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -40,14 +41,34 @@ export function ContactPanel() {
       });
 
       if (!response.ok) {
-        throw new Error("Request failed");
+        const payload = await response.json().catch(() => null);
+        const errorMessage = typeof payload?.error === "string" && payload.error.trim().length > 0 ? payload.error : "Unable to send message right now. Please try again later.";
+
+        if (response.status === 400 && errorMessage) {
+          const normalized = errorMessage.toLowerCase();
+          if (normalized.includes("name")) {
+            setError("name", { type: "server", message: errorMessage });
+          } else if (normalized.includes("email")) {
+            setError("email", { type: "server", message: errorMessage });
+          } else {
+            setError("message", { type: "server", message: errorMessage });
+          }
+        }
+
+        throw new Error(errorMessage);
       }
 
-      setStatus("success");
+      setFeedback({
+        type: "success",
+        message: "Thanks for reaching out! I'll get back to you shortly.",
+      });
       reset();
     } catch (error) {
       console.error(error);
-      setStatus("error");
+      const message = error instanceof Error && error.message
+        ? error.message
+        : "Hmm, something went wrong. Could you send me an email directly instead?";
+      setFeedback({ type: "error", message });
     }
   };
 
@@ -129,7 +150,11 @@ export function ContactPanel() {
               <textarea
                 id="message"
                 rows={5}
-                {...register("message", { required: "Tell me a bit about your idea or role" })}
+                {...register("message", {
+                  required: "Tell me a bit about your idea or role",
+                  minLength: { value: 10, message: "Please share at least 10 characters" },
+                  maxLength: { value: 5000, message: "Message is a little too long (5000 characters max)" },
+                })}
                 className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
               />
               {errors.message ? (
@@ -144,14 +169,14 @@ export function ContactPanel() {
             <p className="mt-3 text-xs text-slate-400 dark:text-slate-500">
               The form posts to a Vercel serverless function placeholder while integrations are finalised.
             </p>
-            {status === "success" ? (
+            {feedback.type === "success" ? (
               <p className="mt-3 rounded-2xl bg-emerald-400/10 px-4 py-3 text-sm font-medium text-emerald-600 dark:text-emerald-300">
-                Thanks for reaching out! I&apos;ll get back to you shortly.
+                {feedback.message ?? "Thanks for reaching out! I'll get back to you shortly."}
               </p>
             ) : null}
-            {status === "error" ? (
+            {feedback.type === "error" ? (
               <p className="mt-3 rounded-2xl bg-rose-400/10 px-4 py-3 text-sm font-medium text-rose-600 dark:text-rose-300">
-                Hmm, something went wrong. Could you send me an email directly instead?
+                {feedback.message ?? "Hmm, something went wrong. Could you send me an email directly instead?"}
               </p>
             ) : null}
           </div>
