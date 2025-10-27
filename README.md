@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Resume site
 
-## Getting Started
+This repository contains the source for a résumé / portfolio site built with the Next.js App Router, Tailwind CSS 4, and a collection of UI components.
 
-First, run the development server:
+## Getting started locally
+
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to preview the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact form configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The contact form sends emails through [Resend](https://resend.com). Before running the site locally or deploying, set the following environment variables:
 
-## Learn More
+1. Duplicate `.env.example` to `.env.local` and fill in the values:
 
-To learn more about Next.js, take a look at the following resources:
+	```ini
+	RESEND_API_KEY=your_resend_api_key
+	RESEND_FROM_EMAIL="Portfolio Contact <onboarding@resend.dev>"
+	RESEND_TO_EMAIL=your-email@example.com
+	```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+	- `RESEND_API_KEY`: API key from your Resend dashboard (Project → API Keys).
+	- `RESEND_FROM_EMAIL`: The verified sender address you want to use. For sandbox testing, keep `onboarding@resend.dev`.
+	- `RESEND_TO_EMAIL`: Where the contact form messages should be delivered. You can supply a comma-separated list for multiple recipients.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Add the same variables in your Vercel project settings (`Project Settings → Environment Variables`) so the production build can send emails.
 
-## Deploy on Vercel
+3. If you're using the Resend sandbox domain (`onboarding@resend.dev`), messages can only go to email addresses you have verified with Resend. For production you should add and verify a custom domain.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+With the environment variables configured, submissions sent from the site will be delivered to your inbox and the sender's email will be set as the reply-to address.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+Deploy the app to [Vercel](https://vercel.com) for the best experience. Make sure the environment variables above are configured in the Vercel dashboard before triggering a production build.
