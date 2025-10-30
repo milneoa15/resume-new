@@ -44,4 +44,28 @@ export const projects: ProjectItem[] = [
     ],
     note: "Google OAuth currently works only for pre-registered accounts while development continues.",
   },
+  {
+    name: "Palette Peek",
+    description:
+      "A Chrome extension that extracts dominant colors from any webpage with a single click. Copy hex codes instantly and customize the palette size to fit your workflow.",
+    highlights: [
+      "Instant color extraction from any webpage with visual swatches and percentage breakdown",
+      "One-click hex code copying directly to clipboard for rapid design workflow",
+      "Customizable palette size (3-50 colors) with persistent settings via Chrome sync storage",
+      "Built with vanilla JavaScript and Chrome Extension Manifest V3 for optimal performance",
+    ],
+    technologies: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Chrome Extension API (Manifest V3)",
+      "Chrome Storage API",
+      "Chrome Scripting API",
+    ],
+    status: "In Production",
+    links: [
+      { label: "Chrome Web Store", href: "https://chromewebstore.google.com/detail/palette-peek/jmgoliggkghalheoakfboofgfanbphdh" },
+      { label: "GitHub Repo", href: "https://github.com/milneoa15/palette-peek" },
+    ],
+  },
 ];
