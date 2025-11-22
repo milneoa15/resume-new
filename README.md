@@ -35,6 +35,18 @@ The contact form sends emails through [Resend](https://resend.com). Before runni
 
 With the environment variables configured, submissions sent from the site will be delivered to your inbox and the sender's email will be set as the reply-to address.
 
+## Chatbot embed configuration
+
+The AI assistant on the contact page is powered by a Hugging Face Space that hosts your Gradio/OpenAI chatbot. Expose the public Space URL to the frontend with the following environment variable:
+
+```ini
+NEXT_PUBLIC_HF_CHATBOT_URL="https://olanmi-resume-email-gpt.hf.space"
+```
+
+- By default the site points to `https://olanmi-resume-email-gpt.hf.space`, the Space powering the resume chatbot today.
+- If you want to swap in a different Space later, use the `Embed this Space` button on Hugging Face, copy the `https://hf.space/embed/.../+/` link, and update the variable locally and in Vercel.
+- When the variable is blank the UI shows a friendly notice so users aren&apos;t stuck with a broken iframe, and the Gradio script only loads when a URL is present.
+
 ## Deploying
 
 Deploy the app to [Vercel](https://vercel.com) for the best experience. Make sure the environment variables above are configured in the Vercel dashboard before triggering a production build.

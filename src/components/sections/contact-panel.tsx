@@ -7,6 +7,7 @@ import { contactMethods } from "@/data/contact";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ChatbotEmbed } from "@/components/sections/chatbot-embed";
 
 type FormValues = {
   name: string;
@@ -181,6 +182,9 @@ export function ContactPanel() {
             ) : null}
           </div>
         </form>
+      </div>
+      <div className="mt-16">
+        <ChatbotEmbed />
       </div>
     </section>
   );
