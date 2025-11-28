@@ -68,4 +68,32 @@ export const projects: ProjectItem[] = [
       { label: "GitHub Repo", href: "https://github.com/milneoa15/palette-peek" },
     ],
   },
+  {
+    name: "Chatbot Web UI v2",
+    description:
+      "A terminal-inspired chat workspace powered by a FastAPI + Ollama backend and a Vite-based React frontend for local LLM experimentation.",
+    highlights: [
+      "Terminal-style UI with session sidebar, streaming transcripts, composer shortcuts, and real-time metrics HUD",
+      "FastAPI service exposing typed chat, session, config, and model-management endpoints backed by SQLite",
+      "Deep Ollama integration for pulling/loading models, SSE chat streaming, and deterministic title fallbacks",
+      "uv + npm toolchain with CI coverage (pytest, Ruff, mypy, Vitest, ESLint) to keep backend and frontend stable",
+    ],
+    technologies: [
+      "FastAPI",
+      "Python 3.12",
+      "uv",
+      "SQLite",
+      "Ollama",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Vitest",
+      "ESLint",
+    ],
+    status: "In Progress",
+    links: [
+      { label: "GitHub Repo", href: "https://github.com/milneoa15/chat_webui_v2" },
+    ],
+  },
 ];
