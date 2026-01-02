@@ -8,7 +8,7 @@ import { StatHighlight } from "@/components/ui/stat-highlight";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden rounded-[3rem] border border-white/20 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 px-6 py-16 shadow-2xl shadow-indigo-500/30 sm:px-10">
+    <section className="relative overflow-hidden rounded-[3rem] border border-white/20 bg-gradient-to-br from-slate-900 via-amber-950 to-slate-900 px-6 py-16 shadow-2xl shadow-amber-500/30 sm:px-10">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(79,70,229,0.25),_transparent_55%)]" />
         <motion.div
@@ -38,7 +38,7 @@ export function HeroSection() {
           className="mt-6 text-balance text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
         >
           {heroContent.name}
-          <span className="block text-lg font-light text-indigo-200 sm:text-xl lg:text-2xl">
+          <span className="block text-lg font-light text-amber-200 sm:text-xl lg:text-2xl">
             {heroContent.title}
           </span>
         </motion.h1>

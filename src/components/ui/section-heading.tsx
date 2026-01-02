@@ -20,7 +20,7 @@ export function SectionHeading({ eyebrow, title, description, className }: Secti
       className={cn("mx-auto max-w-3xl text-center", className)}
     >
       {eyebrow ? (
-        <div className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-indigo-400/90">
+        <div className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-amber-400/90">
           {eyebrow}
         </div>
       ) : null}

@@ -15,9 +15,9 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
     <section id="skills" className="mx-auto max-w-5xl py-20">
       {showHeading ? (
         <SectionHeading
-          eyebrow="Expertise"
-          title="A versatile toolkit spanning the full development stack"
-          description="From low-level systems to modern web frameworks and AI tools, I bring diverse technical expertise to solve complex problems across multiple domains."
+          eyebrow="Skills"
+          title="A comprehensive skillset in administrative and office management"
+          description="With extensive experience across office systems, financial administration, scheduling, and client management, I possess a diverse set of professional competencies to drive operational success."
         />
       ) : null}
       <div className={`grid gap-6 md:grid-cols-2 ${showHeading ? "mt-14" : "mt-10"}`}>
@@ -28,10 +28,10 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.05 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-md shadow-indigo-500/10 dark:border-slate-700/70 dark:bg-slate-900/70"
+            className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-md shadow-amber-500/10 dark:border-slate-700/70 dark:bg-slate-900/70"
           >
             <div className="flex items-center gap-3">
-              <Sparkles className="h-5 w-5 text-indigo-500 dark:text-indigo-300" />
+              <Sparkles className="h-5 w-5 text-amber-500 dark:text-amber-300" />
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                 {category.title}
               </h3>
@@ -40,7 +40,7 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
               {category.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-indigo-600 dark:bg-indigo-400/10 dark:text-indigo-200"
+                  className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-600 dark:bg-amber-400/10 dark:text-amber-200"
                 >
                   {item}
                 </span>

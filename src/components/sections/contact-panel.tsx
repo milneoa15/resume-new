@@ -87,16 +87,16 @@ export function ContactPanel() {
             return (
               <Card
                 key={method.label}
-                className="flex items-center justify-between gap-4 rounded-3xl border border-indigo-100/70 bg-white/80 p-6 text-left dark:border-slate-700/70 dark:bg-slate-900/70"
+                className="flex items-center justify-between gap-4 rounded-3xl border border-amber-100/70 bg-white/80 p-6 text-left dark:border-slate-700/70 dark:bg-slate-900/70"
               >
                 <div>
                   <div className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                    <Icon className="h-5 w-5 text-indigo-500 dark:text-indigo-300" />
+                    <Icon className="h-5 w-5 text-amber-500 dark:text-amber-300" />
                     {method.label}
                   </div>
                   <a
                     href={method.href}
-                    className="mt-1 block text-base font-medium text-indigo-600 underline-offset-4 transition hover:underline dark:text-indigo-300"
+                    className="mt-1 block text-base font-medium text-amber-600 underline-offset-4 transition hover:underline dark:text-amber-300"
                   >
                     {method.value}
                   </a>
@@ -110,7 +110,7 @@ export function ContactPanel() {
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="rounded-[2.5rem] border border-indigo-100/70 bg-white p-8 shadow-xl shadow-indigo-500/10 dark:border-slate-700/70 dark:bg-slate-900/80"
+          className="rounded-[2.5rem] border border-amber-100/70 bg-white p-8 shadow-xl shadow-amber-500/10 dark:border-slate-700/70 dark:bg-slate-900/80"
         >
           <div className="space-y-4">
             <div>
@@ -121,7 +121,7 @@ export function ContactPanel() {
                 id="name"
                 type="text"
                 {...register("name", { required: "Please share your name" })}
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
+                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
               />
               {errors.name ? (
                 <p className="mt-1 text-xs text-rose-500">{errors.name.message}</p>
@@ -138,7 +138,7 @@ export function ContactPanel() {
                   required: "Email is required",
                   pattern: { value: /\S+@\S+\.\S+/, message: "Please provide a valid email" },
                 })}
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
+                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
               />
               {errors.email ? (
                 <p className="mt-1 text-xs text-rose-500">{errors.email.message}</p>
@@ -156,7 +156,7 @@ export function ContactPanel() {
                   minLength: { value: 10, message: "Please share at least 10 characters" },
                   maxLength: { value: 5000, message: "Message is a little too long (5000 characters max)" },
                 })}
-                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
+                className="mt-2 w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-inner focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-200 dark:border-slate-700 dark:bg-slate-800/70 dark:text-white"
               />
               {errors.message ? (
                 <p className="mt-1 text-xs text-rose-500">{errors.message.message}</p>

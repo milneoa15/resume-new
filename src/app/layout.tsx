@@ -16,36 +16,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oliver Milne | Software Engineer & AI Developer",
+  title: "Deaane Milne | Administrative Professional",
   description:
-    "Software Engineer and AI Developer specializing in modern web platforms, intelligent automation, and embedded networking systems. 2.5+ years building resilient solutions at Allied Telesis.",
+    "Administrative professional with 10+ years of experience at ScreenSouth NZ in Christchurch. Specializing in office management, scheduling, client relations, and organizational excellence.",
   keywords: [
-    "Software Engineer",
-    "AI Developer",
-    "Full Stack Developer",
-    "MCP",
-    "Model Context Protocol",
-    "Next.js",
-    "TypeScript",
-    "Embedded Systems",
-    "CCNA",
-    "Oliver Milne",
+    "Administrative Professional",
+    "Office Management",
+    "Scheduling",
+    "Client Relations",
+    "Christchurch",
+    "ScreenSouth NZ",
+    "Deaane Milne",
+    "HR Administration",
   ],
-  authors: [{ name: "Oliver Milne" }],
+  authors: [{ name: "Deaane Milne" }],
   openGraph: {
     type: "website",
     locale: "en_NZ",
-    url: "https://olivermilne.dev",
-    title: "Oliver Milne | Software Engineer & AI Developer",
+    url: "https://deaanemilne.nz",
+    title: "Deaane Milne | Administrative Professional",
     description:
-      "Software Engineer and AI Developer specializing in modern web platforms, intelligent automation, and embedded networking systems.",
-    siteName: "Oliver Milne Portfolio",
+      "Administrative professional with 10+ years of experience. Specializing in office management and organizational excellence.",
+    siteName: "Deaane Milne Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oliver Milne | Software Engineer & AI Developer",
+    title: "Deaane Milne | Administrative Professional",
     description:
-      "Software Engineer and AI Developer specializing in modern web platforms, intelligent automation, and embedded networking systems.",
+      "Administrative professional with 10+ years of experience specializing in office management and organizational excellence.",
   },
   robots: {
     index: true,
@@ -68,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50/30 to-slate-100 antialiased dark:from-slate-950 dark:via-indigo-950/30 dark:to-slate-900`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gradient-to-br from-cyan-50 via-teal-50/40 to-blue-50 antialiased dark:from-slate-950 dark:via-teal-950/30 dark:to-slate-900`}
       >
         <ScrollProgressBar />
         <Header />

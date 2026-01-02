@@ -3,30 +3,23 @@ import type { ContactMethod } from "@/types/content";
 export const contactMethods: ContactMethod[] = [
   {
     label: "Email",
-    value: "milneoa15@outlook.com",
-    href: "mailto:milneoa15@outlook.com",
+    value: "deaane.milne@email.com",
+    href: "mailto:deaane.milne@email.com",
     icon: "mail",
     helper: "Best way to reach me.",
   },
   {
     label: "Mobile",
-    value: "+64 27 949 8694",
-    href: "tel:+64279498694",
+    value: "+64 21 345 6789",
+    href: "tel:+64213456789",
     icon: "phone",
     helper: "Reach out within NZ business hours.",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/oliver-milne",
-    href: "https://www.linkedin.com/in/oliver-milne-5446b7325/",
+    value: "linkedin.com/in/deaane-milne",
+    href: "https://www.linkedin.com/in/deaane-milne-admin/",
     icon: "linkedin",
     helper: "Connect for professional updates and networking.",
-  },
-  {
-    label: "GitHub",
-    value: "github.com/milneoa15",
-    href: "https://github.com/milneoa15",
-    icon: "github",
-    helper: "Explore public repositories.",
   },
 ];

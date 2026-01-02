@@ -1,18 +1,18 @@
 import type { HeroContent } from "@/types/content";
 
 export const heroContent: HeroContent = {
-  name: "Oliver Milne",
-  title: "Software Engineer & AI Developer",
+  name: "Deaane Milne",
+  title: "Administrative Professional",
   mission:
-    "Build innovative AI solutions that elevate user experiences and drive intelligent automation.",
+    "Deliver efficient administrative support and organizational excellence to drive business success.",
   summary:
-    "I specialise in bringing modern web platforms and intelligent automation to life. From full-stack development to shaping cutting-edge conversational AI tools, I craft resilient solutions that enhance both user and business outcomes.",
+    "With nearly a decade of dedicated administrative experience at ScreenSouth NZ, I specialise in streamlining operations, managing complex scheduling, and providing comprehensive support to teams and leadership. Known for attention to detail, proactive problem-solving, and maintaining smooth office operations.",
   stats: [
-    { label: "Professional Experience", value: "2 years 8 months" },
-    { label: "Education", value: "Bachelor of Computer Science • University of Canterbury" },
+    { label: "Professional Experience", value: "10+ years" },
+    { label: "Current Role", value: "Admin • ScreenSouth NZ, Christchurch" },
   ],
   actions: [
     { label: "Explore Experience", href: "/experience", variant: "primary" },
-    { label: "View Projects", href: "/projects", variant: "secondary" },
+    { label: "Get In Touch", href: "/contact", variant: "secondary" },
   ],
 };

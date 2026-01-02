@@ -39,7 +39,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
             transition={{ duration: 0.5, delay: index * 0.08 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Card className="h-full border border-indigo-100/80 bg-white/70 p-8 text-left dark:border-slate-800/70 dark:bg-slate-900/80">
+            <Card className="h-full border border-amber-100/80 bg-white/70 p-8 text-left dark:border-slate-800/70 dark:bg-slate-900/80">
               <Badge variant={statusVariant[project.status]}>{project.status}</Badge>
               <h3 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">
                 {project.name}
@@ -88,7 +88,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                       <Link
                         key={link.label}
                         href={link.href}
-                        className="inline-flex items-center gap-2 rounded-full border border-indigo-300/60 bg-indigo-400/10 px-4 py-2 text-sm font-medium text-indigo-600 transition hover:bg-indigo-400/20 dark:border-indigo-400/40 dark:text-indigo-200"
+                        className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-600 transition hover:bg-amber-400/20 dark:border-amber-400/40 dark:text-amber-200"
                       >
                         {content}
                       </Link>

@@ -15,14 +15,14 @@ function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }
       transition={{ duration: 0.6, delay: index * 0.05, ease: "easeOut" }}
       viewport={{ once: true, margin: "-10% 0px" }}
     >
-      <Card className="relative overflow-visible border-none bg-white/80 p-8 text-left shadow-2xl shadow-indigo-500/10 ring-1 ring-indigo-100/60 dark:bg-slate-900/80 dark:ring-slate-700/80">
-        <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-indigo-500 dark:text-indigo-300">
+      <Card className="relative overflow-visible border-none bg-white/80 p-8 text-left shadow-2xl shadow-amber-500/10 ring-1 ring-amber-100/60 dark:bg-slate-900/80 dark:ring-slate-700/80">
+        <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-amber-500 dark:text-amber-300">
           <BriefcaseBusiness className="h-4 w-4" />
           {item.start} — {item.end}
         </div>
         <div className="flex flex-wrap items-baseline gap-3">
           <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{item.role}</h3>
-          <span className="rounded-full border border-indigo-200/70 bg-indigo-200/30 px-3 py-1 text-xs font-medium uppercase tracking-wide text-indigo-700 dark:border-indigo-400/40 dark:bg-indigo-400/10 dark:text-indigo-200">
+          <span className="rounded-full border border-amber-200/70 bg-amber-200/30 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-200">
             {item.company}
           </span>
         </div>
@@ -60,12 +60,12 @@ export function ExperienceTimeline({ showHeading = true }: ExperienceTimelinePro
       {showHeading ? (
         <SectionHeading
           eyebrow="Experience"
-          title="From embedded systems to full-stack development and AI engineering"
-          description="I started my career in embedded networking systems, but discovered my passion lies in building modern web applications and intelligent AI tools that transform how users interact with technology."
+          title="A decade of administrative excellence and operational leadership"
+          description="With 10+ years in administrative roles at ScreenSouth NZ and prior experience at Christchurch City Council, I bring proven expertise in office management, client relations, and streamlined operations."
         />
       ) : null}
       <ol
-        className={`relative ${showHeading ? "mt-14" : "mt-8"} space-y-10 border-l border-dashed border-indigo-200/70 pl-8 dark:border-indigo-500/30 md:space-y-12`}
+        className={`relative ${showHeading ? "mt-14" : "mt-8"} space-y-10 border-l border-dashed border-amber-200/70 pl-8 dark:border-amber-500/30 md:space-y-12`}
       >
         {experience.map((item, index) => (
           <ExperienceCard key={`${item.company}-${item.role}`} item={item} index={index} />

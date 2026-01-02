@@ -2,27 +2,27 @@ import type { Certification, SkillCategory } from "@/types/content";
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "C", "Lua", "Bash", "HTML", "CSS", "XML", "JSON"],
+    title: "Office Management",
+    items: ["Scheduling & Calendar Management", "Budget Tracking", "Client Relations", "Vendor Management", "Event Coordination"],
   },
   {
-    title: "Frameworks & Platforms",
-    items: ["Node.js", "Express.js", "Angular.JS", "REST APIs", "Next.js", "MCP", "LLMs"],
+    title: "Administrative Systems",
+    items: ["Microsoft Word", "Microsoft Excel", "Microsoft Outlook", "QuickBooks", "Database Management", "Document Control"],
   },
   {
-    title: "Development Tools",
-    items: ["Git", "GitHub Copilot", "Visual Studio Code", "Jenkins", "Jira", "Linux", "Docker"],
+    title: "Financial & HR",
+    items: ["Accounts Payable/Receivable", "Invoice Processing", "Payroll Coordination", "Expense Management", "HR Documentation", "Compliance"],
   },
   {
-    title: "Systems & Methodologies",
-    items: ["Linux Kernel", "Networking", "Network Switches", "Agile Methodologies", "Problem Solving"],
+    title: "Professional Competencies",
+    items: ["Communication", "Organization", "Attention to Detail", "Problem Solving", "Customer Service", "Time Management", "Team Collaboration"],
   },
 ];
 
 export const certifications: Certification[] = [
   {
-    name: "Cisco Certified Network Associate (CCNA)",
-    issuer: "Cisco",
-    year: "2023",
+    name: "Microsoft Office Specialist",
+    issuer: "Microsoft",
+    year: "2018",
   },
 ];

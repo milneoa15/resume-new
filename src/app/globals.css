@@ -46,12 +46,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-indigo-400/50 transition-colors hover:bg-indigo-500/70;
+  @apply rounded-full bg-teal-400/50 transition-colors hover:bg-teal-500/70;
 }
 
 /* Focus visible styles for accessibility */
 *:focus-visible {
-  @apply outline-2 outline-offset-2 outline-indigo-500;
+  @apply outline-2 outline-offset-2 outline-teal-500;
 }
 
 /* Smooth transitions for theme changes */
