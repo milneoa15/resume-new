@@ -24,11 +24,11 @@ export function SectionHeading({ eyebrow, title, description, className }: Secti
           {eyebrow}
         </div>
       ) : null}
-      <h2 className="text-balance text-3xl font-semibold text-slate-900 dark:text-white sm:text-4xl">
+      <h2 className="text-balance text-3xl font-semibold text-slate-900  sm:text-4xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-balance text-base text-slate-600 dark:text-slate-300">
+        <p className="mt-4 text-balance text-base text-slate-600 ">
           {description}
         </p>
       ) : null}

@@ -28,11 +28,11 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.05 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-md shadow-amber-500/10 dark:border-slate-700/70 dark:bg-slate-900/70"
+            className="rounded-3xl border border-slate-200/70 bg-slate-200/80 p-6 shadow-md shadow-amber-500/10  "
           >
             <div className="flex items-center gap-3">
-              <Sparkles className="h-5 w-5 text-amber-500 dark:text-amber-300" />
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+              <Sparkles className="h-5 w-5 text-amber-500 " />
+              <h3 className="text-lg font-semibold text-slate-900 ">
                 {category.title}
               </h3>
             </div>
@@ -40,7 +40,7 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
               {category.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-600 dark:bg-amber-400/10 dark:text-amber-200"
+                  className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-600  "
                 >
                   {item}
                 </span>
@@ -53,11 +53,11 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: skillCategories.length * 0.05 }}
           viewport={{ once: true, amount: 0.4 }}
-          className="rounded-3xl border border-amber-200/70 bg-white/80 p-6 shadow-md shadow-amber-500/10 dark:border-amber-700/70 dark:bg-slate-900/70"
+          className="rounded-3xl border border-amber-200/70 bg-slate-200/80 p-6 shadow-md shadow-amber-500/10  "
         >
           <div className="flex items-center gap-3">
-            <Award className="h-5 w-5 text-amber-500 dark:text-amber-300" />
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Certifications</h3>
+            <Award className="h-5 w-5 text-amber-500 " />
+            <h3 className="text-lg font-semibold text-slate-900 ">Certifications</h3>
           </div>
           <div className="mt-4 space-y-3">
             {certifications.map((cert) => (
@@ -65,8 +65,8 @@ export function SkillsMatrix({ showHeading = true }: SkillsMatrixProps = {}) {
                 key={cert.name}
                 className="rounded-2xl p-4"
               >
-                <p className="text-sm font-medium text-slate-900 dark:text-white">{cert.name}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+                <p className="text-sm font-medium text-slate-900 ">{cert.name}</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500 ">
                   {cert.issuer} · {cert.year}
                 </p>
               </div>

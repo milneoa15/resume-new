@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F1F3E0;
+  --foreground: #778873;
+  
+  /* Palette Variables */
+  --c-cream: #F1F3E0;
+  --c-sage-light: #D2DCB6;
+  --c-sage-medium: #A1BC98;
+  --c-sage-dark: #778873;
 }
 
 @theme inline {
@@ -10,13 +16,45 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Override White/Black */
+  --color-white: var(--c-cream);
+  --color-black: var(--c-sage-dark);
+
+  /* Override Slate (Grays) */
+  --color-slate-50: var(--c-cream);
+  --color-slate-100: var(--c-cream);
+  --color-slate-200: var(--c-sage-light);
+  --color-slate-300: var(--c-sage-light);
+  --color-slate-400: var(--c-sage-medium);
+  --color-slate-500: var(--c-sage-medium);
+  --color-slate-600: var(--c-sage-dark);
+  --color-slate-700: var(--c-sage-dark);
+  --color-slate-800: var(--c-sage-dark);
+  --color-slate-900: var(--c-sage-dark);
+  --color-slate-950: var(--c-sage-dark);
+
+  /* Override Amber/Orange/Yellow (Accents) */
+  --color-amber-50: var(--c-cream);
+  --color-amber-100: var(--c-cream);
+  --color-amber-200: var(--c-sage-light);
+  --color-amber-300: var(--c-sage-light);
+  --color-amber-400: var(--c-sage-medium);
+  --color-amber-500: var(--c-sage-dark);
+  --color-amber-600: var(--c-sage-dark);
+  --color-amber-700: var(--c-sage-dark);
+  --color-amber-800: var(--c-sage-dark);
+  --color-amber-900: var(--c-sage-dark);
+  
+  --color-orange-500: var(--c-sage-dark);
+  --color-orange-400: var(--c-sage-medium);
+  
+  --color-yellow-500: var(--c-sage-dark);
+  --color-yellow-400: var(--c-sage-dark);
+  
+  /* Map Teal used in scrollbar */
+  --color-teal-400: var(--c-sage-medium);
+  --color-teal-500: var(--c-sage-dark);
 }
 
 * {
@@ -42,7 +80,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100 dark:bg-slate-900;
+  @apply bg-slate-100;
 }
 
 ::-webkit-scrollbar-thumb {

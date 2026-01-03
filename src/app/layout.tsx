@@ -66,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gradient-to-br from-cyan-50 via-teal-50/40 to-blue-50 antialiased dark:from-slate-950 dark:via-teal-950/30 dark:to-slate-900`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
         <ScrollProgressBar />
         <Header />

@@ -39,15 +39,15 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
             transition={{ duration: 0.5, delay: index * 0.08 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <Card className="h-full border border-amber-100/80 bg-white/70 p-8 text-left dark:border-slate-800/70 dark:bg-slate-900/80">
+            <Card className="h-full border border-amber-100/80 bg-slate-200/80 p-8 text-left  ">
               <Badge variant={statusVariant[project.status]}>{project.status}</Badge>
-              <h3 className="mt-4 text-xl font-semibold text-slate-900 dark:text-white">
+              <h3 className="mt-4 text-xl font-semibold text-slate-900 ">
                 {project.name}
               </h3>
-              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{project.description}</p>
-              <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-3 text-sm text-slate-600 ">{project.description}</p>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600 ">
                 {project.highlights.map((highlight) => (
-                  <li key={highlight} className="rounded-2xl bg-white/70 p-4 dark:bg-slate-800/60">
+                  <li key={highlight} className="rounded-2xl bg-white/80 p-4 ">
                     {highlight}
                   </li>
                 ))}
@@ -56,7 +56,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-500 dark:border-slate-700 dark:bg-slate-800/60 dark:text-slate-300"
+                    className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-500   "
                   >
                     {tech}
                   </span>
@@ -77,7 +77,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                         <span
                           key={link.label}
                           aria-disabled="true"
-                          className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-100/70 px-4 py-2 text-sm font-medium text-slate-400 dark:border-slate-700/60 dark:bg-slate-800/60 dark:text-slate-500"
+                          className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-100/70 px-4 py-2 text-sm font-medium text-slate-400   "
                         >
                           {content}
                         </span>
@@ -88,7 +88,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                       <Link
                         key={link.label}
                         href={link.href}
-                        className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-600 transition hover:bg-amber-400/20 dark:border-amber-400/40 dark:text-amber-200"
+                        className="inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-600 transition hover:bg-amber-400/20  "
                       >
                         {content}
                       </Link>
@@ -97,7 +97,7 @@ export function ProjectGrid({ showHeading = true }: ProjectGridProps = {}) {
                 </div>
               ) : null}
               {project.note ? (
-                <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
+                <p className="mt-4 text-xs text-slate-500 ">
                   {project.note}
                 </p>
               ) : null}

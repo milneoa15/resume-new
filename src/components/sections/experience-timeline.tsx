@@ -15,22 +15,22 @@ function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }
       transition={{ duration: 0.6, delay: index * 0.05, ease: "easeOut" }}
       viewport={{ once: true, margin: "-10% 0px" }}
     >
-      <Card className="relative overflow-visible border-none bg-white/80 p-8 text-left shadow-2xl shadow-amber-500/10 ring-1 ring-amber-100/60 dark:bg-slate-900/80 dark:ring-slate-700/80">
-        <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-amber-500 dark:text-amber-300">
+      <Card className="relative overflow-visible border-none bg-slate-200/80 p-8 text-left shadow-2xl shadow-amber-500/10 ring-1 ring-amber-100/60  ">
+        <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-amber-500 ">
           <BriefcaseBusiness className="h-4 w-4" />
           {item.start} — {item.end}
         </div>
         <div className="flex flex-wrap items-baseline gap-3">
-          <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{item.role}</h3>
-          <span className="rounded-full border border-amber-200/70 bg-amber-200/30 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-200">
+          <h3 className="text-xl font-semibold text-slate-900 ">{item.role}</h3>
+          <span className="rounded-full border border-amber-200/70 bg-amber-200/30 px-3 py-1 text-xs font-medium uppercase tracking-wide text-amber-700   ">
             {item.company}
           </span>
         </div>
-        <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{item.location}</p>
-        <p className="mt-4 text-base text-slate-700 dark:text-slate-200">{item.description}</p>
-        <ul className="mt-6 grid gap-3 text-sm text-slate-600 dark:text-slate-300">
+        <p className="mt-3 text-sm text-slate-600 ">{item.location}</p>
+        <p className="mt-4 text-base text-slate-700 ">{item.description}</p>
+        <ul className="mt-6 grid gap-3 text-sm text-slate-600 ">
           {item.achievements.map((achievement) => (
-            <li key={achievement} className="rounded-2xl bg-white/60 p-4 shadow-sm dark:bg-slate-800/60">
+            <li key={achievement} className="rounded-2xl bg-white/80 p-4 shadow-sm ">
               {achievement}
             </li>
           ))}
@@ -39,7 +39,7 @@ function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }
           {item.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-500 shadow-sm dark:border-slate-700 dark:bg-slate-800/60 dark:text-slate-300"
+              className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-500 shadow-sm   "
             >
               {tech}
             </span>
@@ -65,7 +65,7 @@ export function ExperienceTimeline({ showHeading = true }: ExperienceTimelinePro
         />
       ) : null}
       <ol
-        className={`relative ${showHeading ? "mt-14" : "mt-8"} space-y-10 border-l border-dashed border-amber-200/70 pl-8 dark:border-amber-500/30 md:space-y-12`}
+        className={`relative ${showHeading ? "mt-14" : "mt-8"} space-y-10 border-l border-dashed border-amber-200/70 pl-8  md:space-y-12`}
       >
         {experience.map((item, index) => (
           <ExperienceCard key={`${item.company}-${item.role}`} item={item} index={index} />
