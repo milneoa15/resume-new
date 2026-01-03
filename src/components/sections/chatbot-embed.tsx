@@ -4,7 +4,7 @@ import { createElement, useEffect, useState, type HTMLAttributes } from "react";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-type GradioAppProps = HTMLAttributes<HTMLElement> & { src?: string };
+type GradioAppProps = HTMLAttributes<HTMLElement> & { src?: string; theme_mode?: "light" | "dark" };
 
 const GradioApp = (props: GradioAppProps) => createElement("gradio-app", props);
 
@@ -128,7 +128,7 @@ export function ChatbotEmbed({
                 </div>
               ) : null}
               {mode === "gradio" ? (
-                <GradioApp src={resolvedSrc} className="block h-[520px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_120px_-60px_rgba(79,70,229,0.4)]  " />
+                <GradioApp src={resolvedSrc} theme_mode="light" className="block h-[520px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_120px_-60px_rgba(79,70,229,0.4)]  " />
               ) : (
                 <iframe
                   src={resolvedSrc}

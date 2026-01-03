@@ -15,9 +15,9 @@ export function StatHighlight({ stat, index }: StatHighlightProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.7 }}
-      className="rounded-3xl border border-amber-200/60 bg-slate-200/80 px-6 py-5 shadow-lg shadow-amber-500/10 backdrop-blur  "
+      className="rounded-3xl border border-slate-200 bg-white/80 px-6 py-5 shadow-lg shadow-slate-200/20 backdrop-blur  "
     >
-      <div className="text-2xl font-semibold text-amber-600 ">
+      <div className="text-2xl font-semibold text-slate-700 ">
         {stat.value}
       </div>
       <div className="mt-1 text-sm font-medium uppercase tracking-wider text-slate-500 ">

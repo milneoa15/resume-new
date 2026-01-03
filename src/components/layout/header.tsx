@@ -19,7 +19,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-4 z-40 mx-auto flex max-w-5xl items-center justify-between rounded-full border border-white/20 bg-white/80 px-6 py-3 shadow-xl shadow-amber-500/10 backdrop-blur  ">
+    <header className="sticky top-4 z-40 mx-auto flex max-w-5xl items-center justify-between rounded-full border border-slate-200 bg-slate-200/80 px-6 py-3 shadow-xl shadow-slate-200/20 backdrop-blur  ">
       <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-amber-600 ">
         <span className="rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 px-3 py-1 text-xs uppercase text-white">
           Deaane Milne

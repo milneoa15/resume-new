@@ -10,11 +10,11 @@ const baseClasses =
 
 const variants: Record<"primary" | "secondary" | "ghost", string> = {
   primary:
-    "bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 text-white shadow-md shadow-amber-500/30 hover:from-orange-400 hover:via-amber-400 hover:to-yellow-400 focus-visible:ring-amber-300",
+    "bg-slate-600 text-white shadow-md shadow-slate-200/50 hover:bg-slate-700 focus-visible:ring-slate-300",
   secondary:
-    "border border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20 focus-visible:ring-white/40   ",
+    "border border-slate-200 bg-white/50 text-slate-700 backdrop-blur hover:bg-white/80 focus-visible:ring-slate-200",
   ghost:
-    "text-amber-500 hover:bg-amber-500/10 focus-visible:ring-amber-300  ",
+    "text-slate-600 hover:bg-slate-600/10 focus-visible:ring-slate-300  ",
 };
 
 type Variant = keyof typeof variants;
