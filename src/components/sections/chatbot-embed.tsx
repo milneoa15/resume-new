@@ -9,7 +9,6 @@ type GradioAppProps = HTMLAttributes<HTMLElement> & { src?: string; theme_mode?:
 const GradioApp = (props: GradioAppProps) => createElement("gradio-app", props);
 
 const GRADIO_SCRIPT_ID = "hf-gradio-embed-script";
-const GRADIO_SCRIPT_SRC = "/vendor/gradio/gradio.js";
 const FALLBACK_CHATBOT_SRC = "https://olanmi-resume-email-gpt.hf.space";
 
 const DEFAULT_TITLE = "Quick Questions?";
@@ -53,7 +52,15 @@ export function ChatbotEmbed({
 
     const script = existingScript ?? document.createElement("script");
     script.id = GRADIO_SCRIPT_ID;
-    script.src = GRADIO_SCRIPT_SRC;
+    // If it's an embed URL, we try to get the base space URL for the script
+    const baseSpaceUrl = resolvedSrc.includes("hf.space/embed") 
+      ? resolvedSrc.split("/embed")[0] + ".hf.space"
+      : resolvedSrc.replace(/\/$/, "");
+    
+    script.src = baseSpaceUrl.includes(".hf.space") && !baseSpaceUrl.includes("://")
+      ? `https://${baseSpaceUrl}/gradio.js`
+      : `${baseSpaceUrl}/gradio.js`;
+      
     script.type = "module";
     script.async = true;
 
@@ -131,7 +138,7 @@ export function ChatbotEmbed({
                 <GradioApp src={resolvedSrc} theme_mode="light" className="block h-[520px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_120px_-60px_rgba(79,70,229,0.4)]  " />
               ) : (
                 <iframe
-                  src={resolvedSrc}
+                  src={`${resolvedSrc}${resolvedSrc.includes("?") ? "&" : "?"}__theme=light`}
                   title="Deaane Milne AI Assistant"
                   className="block h-[520px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-inner  "
                   allow="clipboard-write;microphone;camera"
